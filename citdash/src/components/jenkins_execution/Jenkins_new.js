@@ -5,12 +5,13 @@ import NavLinks from './NavLinks';
 import Anf from './anf/Anf';
 import Gcp from './gcp/Gcp';
 import Onprem from './onprem/Onprem';
+import Anf_sanity from './anf/Anf_sanity';
 
 
 function Jenkins_new() {
   return (
     <>
-     
+
 
       <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-gray-300">
         <Link
@@ -38,9 +39,10 @@ function Jenkins_new() {
           </div>
           <div className='bg-gray-200 col-span-3 mx-1 p-2'>
             <Routes>
-              <Route exact path='/anf' Component={Anf}/>
-              <Route exact path='/gcp' Component={Gcp}/>
-              <Route exact path='/onprem' Component={Onprem}/>
+              <Route exact path='/anf' Component={Anf} />
+              <Route exact path='/anf/anf_sanity' Component={Anf_sanity} />
+              <Route exact path='/gcp' Component={Gcp} />
+              <Route exact path='/onprem' Component={Onprem} />
             </Routes>
           </div>
         </div>
