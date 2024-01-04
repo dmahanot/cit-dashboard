@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom';
-import { BugAntIcon, CloudIcon, CommandLineIcon, DocumentIcon, HomeIcon, PowerIcon } from '@heroicons/react/24/outline';
+import { BugAntIcon, PowerIcon } from '@heroicons/react/24/outline';
 import NavLinks from './NavLinks';
 import Anf from './anf/Anf';
 import Gcp from './gcp/Gcp';
 import Onprem from './onprem/Onprem';
 import Anf_sanity from './anf/Anf_sanity';
+import Anf_crr from './anf/Anf_crr';
 
 
 function Jenkins_new() {
@@ -39,8 +40,9 @@ function Jenkins_new() {
           </div>
           <div className='bg-gray-200 col-span-3 mx-1 p-2'>
             <Routes>
-              <Route exact path='/anf' Component={Anf} />
-              <Route exact path='/anf/anf_sanity' Component={Anf_sanity} />
+              {/* <Route exact path='/anf' Component={Anf} /> */}
+              <Route exact path='anf_sanity' Component={Anf_sanity} />
+              <Route exact path='anf_crr' Component={Anf_crr} />
               <Route exact path='/gcp' Component={Gcp} />
               <Route exact path='/onprem' Component={Onprem} />
             </Routes>
