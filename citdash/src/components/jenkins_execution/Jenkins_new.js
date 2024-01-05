@@ -41,8 +41,8 @@ function Jenkins_new() {
           <div className='bg-gray-200 col-span-3 mx-1 p-2'>
             <Routes>
               {/* <Route exact path='/anf' Component={Anf} /> */}
-              <Route exact path='anf_sanity' Component={Anf_sanity} />
-              <Route exact path='anf_crr' Component={Anf_crr} />
+              <Route exact path='/anf_sanity' Component={Anf_sanity} />
+              <Route exact path='/anf_crr' Component={Anf_crr} />
               <Route exact path='/gcp' Component={Gcp} />
               <Route exact path='/onprem' Component={Onprem} />
             </Routes>
