@@ -1,7 +1,7 @@
 import './App.css';
 import Dashboard from './components/dashboard/Dashboard';
 import Jenkins_new from './components/jenkins_execution/Jenkins_new';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Anf from './components/jenkins_execution/anf/Anf';
 import Gcp from './components/jenkins_execution/gcp/Gcp';
 import Onprem from './components/jenkins_execution/onprem/Onprem';
@@ -13,10 +13,12 @@ function App() {
   return (
     // <Login />
     <Routes>
+      {/* <Route path="/login" element={<Login />} /> */}
+      <Route path="/" element={<Navigate to="/dashboard" />} />
       <Route path="dashboard" element={<Dashboard />} />
       <Route path="jenkins_new/" element={<Jenkins_new />} >
         <Route path="anf_sanity" element={<Anf_sanity />} />
-        <Route path="anf_crr" element={<Anf_crr/>} />
+        <Route path="anf_crr" element={<Anf_crr />} />
         <Route path="gcp" element={<Gcp />} />
         <Route path="onprem" element={<Onprem />} />
       </Route>
