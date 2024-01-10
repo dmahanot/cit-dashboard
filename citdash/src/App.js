@@ -12,7 +12,7 @@ import Login from './components/login/Login';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/dashboard" />} />
+      <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/login" element={<Login />} />
       <Route path="dashboard" element={<Dashboard />} />
       <Route path="jenkins_new/" element={<Jenkins_new />} >
