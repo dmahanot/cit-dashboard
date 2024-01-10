@@ -101,26 +101,29 @@ function Anf_sanity() {
         <div className=' flex min-w-min flex-row gap-1 p-3 font-sans text-base font-normal'>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>
             <input type="radio" name="radio-1" className="radio radio-info" checked />
-            <span className='p-2'>WEST US 2</span>
+            <span className='p-2'>westus2stage</span>
           </div>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>
             <input type="radio" name="radio-1" className="radio radio-info" />
-            <span className='p-2'>SOUTH-CENTRAL-US</span>
+            <span className='p-2'>southcentralusstage</span>
           </div>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>
             <input type="radio" name="radio-1" className="radio radio-info" />
-            <span className='p-2'>CENTRAL-US-EUAP</span>
+            <span className='p-2'>eastus2euap</span>
           </div>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>
             <input type="radio" name="radio-1" className="radio radio-info" />
-            <span className='p-2'>EAST-US-EUAP</span>
+            <span className='p-2'>eastusstage</span>
           </div>
         </div>
       </div>
-      <div className='relative w-full items-center my-20 p-4 min-h-max '>
-        <div className='text-sky-600 items-center leading-tight text-center'>
-          <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600'>Trigger</button>
+      <div className='relative w-full items-center my-10 p-4 h-[240px]'>
+        <div className='text-sky-600 items-center leading-tight text-center flex pb-4'>
+          <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 mx-1'>View </button>
+          <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 mx-1'>Trigger New</button>
+          <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 mx-1'>Disable Job</button>
           </div>
+          <div className='bg-gray-300 h-full'>COnsole logs</div>
       </div>
     </>
   )
