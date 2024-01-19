@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
@@ -10,15 +10,14 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "cbs" && password === "netapp1!") {
+    if (username === "cituser" && password === "b.D-?I?5iL;onwcc") {
       navigate("/dashboard");
     }
     else {
       alert("incorrect credentials")
       setUsername('');
-      setPassword('');
+      setPassword('');      
       document.getElementById("loginfm").reset();
-
     }
   }
 
@@ -57,5 +56,3 @@ function Login() {
 }
 
 export default Login
-
-// onClick={() => check_In()} 

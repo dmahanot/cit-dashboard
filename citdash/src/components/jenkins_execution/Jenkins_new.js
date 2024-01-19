@@ -2,18 +2,16 @@ import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom';
 import { BugAntIcon, PowerIcon } from '@heroicons/react/24/outline';
 import NavLinks from './NavLinks';
-import Anf from './anf/Anf';
-import Gcp from './gcp/Gcp';
 import Onprem from './onprem/Onprem';
 import Anf_sanity from './anf/Anf_sanity';
 import Anf_crr from './anf/Anf_crr';
+import Gcp_sanity from './gcp/Gcp_sanity';
+import Gcp_crr from './gcp/Gcp_crr';
 
 
 function Jenkins_new() {
   return (
     <>
-
-
       <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-gray-300">
         <Link
           className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40"
@@ -43,8 +41,9 @@ function Jenkins_new() {
               {/* <Route exact path='/anf' Component={Anf} /> */}
               <Route exact path='/anf_sanity' Component={Anf_sanity} />
               <Route exact path='/anf_crr' Component={Anf_crr} />
-              <Route exact path='/gcp' Component={Gcp} />
               <Route exact path='/onprem' Component={Onprem} />
+              <Route exact path='/gcp_sanity' Component={Gcp_sanity} />
+              <Route exact path='/gcp_crr' Component={Gcp_crr} />
             </Routes>
           </div>
         </div>
