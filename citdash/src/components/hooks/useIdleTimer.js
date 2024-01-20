@@ -26,10 +26,11 @@ function useIdle({ onIdle, idleTime }) {
         console.log("Current time", formattedCurrentTime); //gets the curent time maybe to see what
 
         onIdle(); //then call onIdle function
+        console.log("user is idle", event);
     };
 
     const { getRemainingTime, getLastActiveTime } = useIdleTimer({
-        timeout: 1000 * 60 * 15,
+        timeout: 1000 * 60 * idleTime,
         onIdle: handleOnIdle,
         debounce: 500
     })

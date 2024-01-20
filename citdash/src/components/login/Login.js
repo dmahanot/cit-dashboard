@@ -10,7 +10,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "cituser" && password === "b.D-?I?5iL;onwcc") {
+    if (username === "cituser" && password === "12345") {
       navigate("/dashboard");
     }
     else {
@@ -20,7 +20,7 @@ function Login() {
       document.getElementById("loginfm").reset();
     }
   }
-
+// b.D-?I?5iL;onwcc
   return (
     <div className="flex h-screen flex-col justify-center px-6 py-12 lg:px-8 bg-gradient-to-b from-sky-200 to-cyan-100">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">

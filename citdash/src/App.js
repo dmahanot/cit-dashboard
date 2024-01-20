@@ -11,9 +11,8 @@ import Gcp_crr from './components/jenkins_execution/gcp/Gcp_crr';
 
 function App() {
   return (
-    
-    <Routes>      
-      {/* <Route path="/" element={<Navigate to="/login" />} /> */}
+
+    <Routes>
       <Route exact path="/" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="jenkins_new/" element={<Jenkins_new />} >
@@ -21,7 +20,6 @@ function App() {
         <Route path="anf_crr" element={<Anf_crr />} />
         <Route path="gcp_sanity" element={<Gcp_sanity />} />
         <Route path="gcp_crr" element={<Gcp_crr />} />
-        {/* <Route path="gcp_sanity" element={< />} /> */}
         <Route path="onprem" element={<Onprem />} />
       </Route>
     </Routes >
