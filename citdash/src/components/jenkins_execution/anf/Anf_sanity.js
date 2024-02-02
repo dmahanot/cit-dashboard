@@ -42,9 +42,10 @@ function Anf_sanity() {
           </div>
         </div>
       </div>
-      <div className='grid grid-cols-3 place-items-center m-1 p-4'>
+      <div className='grid grid-cols-4 place-items-center m-1 p-4'>
         <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>View Previous</button>
         <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>Trigger New </button>
+        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>Abort Run </button>
         <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>Disable Job</button>
       </div>
       <div className='bg-gray-900 h-[240px] text-white p-1'>Console logs</div>

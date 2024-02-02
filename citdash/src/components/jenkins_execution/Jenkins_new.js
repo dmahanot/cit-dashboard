@@ -19,7 +19,7 @@ function Jenkins_new() {
         >
           <div className="w-32 text-white md:w-full flex" >
             <BugAntIcon className="h-12 w-12 rotate-[15deg]" />
-            <div className="text-[40px] px-2">Jenkins Executions</div>
+            <div className="text-[40px] px-2">CIT Regression Executions</div>
           </div>
         </Link>
         <div className='grid grid-flow-col h-full '>
