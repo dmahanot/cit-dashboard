@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { MdInfoOutline } from "react-icons/md";
 
 function Anf_sanity() {
   return (
@@ -43,10 +44,42 @@ function Anf_sanity() {
         </div>
       </div>
       <div className='grid grid-cols-4 place-items-center m-1 p-4'>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>View Previous</button>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>Trigger New </button>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>Abort Run </button>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16  hover:text-white hover:bg-sky-600 '>Disable Job</button>
+        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+          <div className='px-1 '>
+            <MdInfoOutline />
+          </div>
+          <div className='px-1'>
+            View Previous
+          </div>
+
+        </button>
+        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+          <div className='px-1 '>
+            <MdInfoOutline />
+          </div>
+          <div className='px-1'>
+            Abort Run
+          </div>
+
+        </button>
+        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+          <div className='px-1 '>
+            <MdInfoOutline />
+          </div>
+          <div className='px-1'>
+            Disable Job
+          </div>
+
+        </button>
+        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+          <div className='px-1 '>
+            <MdInfoOutline />
+          </div>
+          <div className='px-1'>
+            Trigger New
+          </div>
+
+        </button>
       </div>
       <div className='bg-gray-900 h-[240px] text-white p-1'>Console logs</div>
     </>
