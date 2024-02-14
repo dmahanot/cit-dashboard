@@ -9,18 +9,23 @@ function Login() {
   const [password, setPassword] = useState("")
 
   const handleLogin = (e) => {
+    let login = localStorage.getItem('login');
     e.preventDefault();
     if (username === "cituser" && password === "12345") {
+      localStorage.setItem('login', true)
       navigate("/dashboard");
     }
     else {
       alert("incorrect credentials")
       setUsername('');
-      setPassword('');      
+      setPassword('');
+      localStorage.removeItem('login')
       document.getElementById("loginfm").reset();
+      navigate("/")
     }
   }
-// b.D-?I?5iL;onwcc
+
+  // b.D-?I?5iL;onwcc
   return (
     <div className="flex h-screen flex-col justify-center px-6 py-12 lg:px-8 bg-gradient-to-b from-sky-200 to-cyan-100">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">

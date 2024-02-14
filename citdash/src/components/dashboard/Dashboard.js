@@ -39,16 +39,25 @@ function Dashboard() {
     useEffect(() => {
         if (remainingTime === 0 && showModal) {
             alert("You have been logged out, due to inactivity.\n Please log in to continue.");
+            localStorage.removeItem('login')
             setShowModal(false);
             navigate("/");
         }
     }, [remainingTime, showModal, navigate]); // this is responsoble for logging user out after timer is down to zero and they have not clicked anything
 
     const handleLogOut = () => {
+        localStorage.removeItem('login')
         setShowModal(false);
         navigate("/");
-    };
 
+    };
+    useEffect(() => {
+        let login = localStorage.getItem('login');
+        if (!login) {
+            navigate("/")
+        }
+    }
+    );
 
 
     return (
@@ -102,7 +111,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div className='bg-gray-300 h-3/5 text-center py-2'>
+                <div className='bg-gray-300 h-4/5 text-center py-2'>
                     BUG Details
                 </div>
             </div>
