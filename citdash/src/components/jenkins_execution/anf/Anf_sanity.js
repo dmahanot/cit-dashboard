@@ -1,7 +1,32 @@
 import React from 'react';
 import { MdInfoOutline } from "react-icons/md";
+import axios from 'axios';
+
 
 function Anf_sanity() {
+
+ function onTriggerClickHandler() {
+    console.log("hello");
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://cvscit-team-jenkins.daas.netapp.com/job/ANF_Sanity/job/ANF_Sanity_Github/job/CIT_ANF_Func_SWESOUTH_GitHub/build?token=cit-dash',
+      headers: {
+        'Authorization': 'Basic Y2l0dXNlcjoxMTY5MDY0MTQ2MWFiNzNkMzU2OWJhNTJhNjg1M2QyZmUz'
+      }
+    };
+  
+    axios.request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      }); 
+  
+  }
+
+  
   return (
     <>
       <div className="relative flex w-full flex-col rounded-xl  bg-clip-border shadow-md bg-gray-50">
@@ -39,7 +64,7 @@ function Anf_sanity() {
           </div>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>
             <input type="radio" name="radio-1" className="radio radio-info" />
-            <span className='p-2 block font-sans text-base antialiased font-medium leading-relaxed text-gray-500'>EAST US2 EUAP</span>
+            <span className='p-2 block font-sans text-base antialiased font-medium leading-relaxed text-gray-500'>SWEDEN SOUTH-STAGE</span>
           </div>
         </div>
       </div>
@@ -62,12 +87,12 @@ function Anf_sanity() {
           </div>
 
         </button>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+        <button onClick={ () => onTriggerClickHandler()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
             <MdInfoOutline />
           </div>
           <div className='px-1'>
-            Disable Job
+            Trigger New
           </div>
 
         </button>
@@ -76,7 +101,7 @@ function Anf_sanity() {
             <MdInfoOutline />
           </div>
           <div className='px-1'>
-            Trigger New
+            Disable Job
           </div>
 
         </button>
