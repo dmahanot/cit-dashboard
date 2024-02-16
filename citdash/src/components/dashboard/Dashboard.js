@@ -103,8 +103,8 @@ function Dashboard() {
                     </div>
                     <div className='bg-gray-200 h-48 flex items-center rounded-md'>
                         <img
-                            className=' h-fit w-48 pr-2 rounded-r-full bg-white'
-                            src='https://toppng.com/uploads/preview/vsim-logo-logo-11569008411y4bp39hqgf.png'
+                            className=' h-fit w-44 rounded-r-full bg-white'
+                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7S_5ZVzJBTW6zZxsQiwxLNxsGoIkiwdjJq_SMZ4zqdO8jsyHO4VureuzLB02lfCttAo&usqp=CAU'
                             alt='' />
                         <div className='font-medium text-justify text-2xl lg:text-2xl md:pr-1 hover:font-bold hover:text-green-600 pl-2'>
                             <Link to="/testcontroller">VSIM SETUP</Link>
