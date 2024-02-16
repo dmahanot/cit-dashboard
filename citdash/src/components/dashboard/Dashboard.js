@@ -62,7 +62,7 @@ function Dashboard() {
 
     return (
         <>
-            <div className="flex h-full flex-col px-3 py-4 md:px-2">
+            <div className="flex h-screen flex-col px-3 py-4 md:px-2 ">
                 {/* <Navbar /> */}
                 <div className="bg-blue-500 py-4 px-2 justify-between flex ">
                     <div className="font-semibold text-2xl text-center items-center flex justify-evenly">
