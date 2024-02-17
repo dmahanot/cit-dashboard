@@ -12,7 +12,7 @@ function Anf_sanity() {
     console.log(ev.target.value);
     setRadioValue(ev.target.value);
   };
-  const onClick = (ev) => {
+  const onTrigger = (ev) => {
     //TO-DO SEND/click value
     console.log("radio value ", radioValue);
     onTriggerClickHandler();
@@ -34,6 +34,24 @@ function Anf_sanity() {
         console.log(error);
       });
 
+  }
+
+  const onAbortClickHandler = () => {
+    console.log("radio value ", radioValue);
+    console.log("Aborted the Existing run");
+    let config = {
+      method: 'get',
+      url: `http://localhost:3000/abort-build/${radioValue}?p=stop`
+    }
+
+    axios.request(config)
+      .then((response) => {
+        console.log(response.status);
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
   return (
@@ -88,7 +106,7 @@ function Anf_sanity() {
           </div>
 
         </button>
-        <button onClick={() => onClick()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+        <button onClick={() => onTrigger()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
             <MdInfoOutline />
           </div>
@@ -97,7 +115,7 @@ function Anf_sanity() {
           </div>
 
         </button>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+        <button onClick={() => onAbortClickHandler()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
             <MdInfoOutline />
           </div>
