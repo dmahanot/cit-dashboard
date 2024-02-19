@@ -112,8 +112,7 @@ function Dashboard() {
                     </div>
                 </div>
                 <div className='bg-gray-100 text-xl py-2 mb-4 font-semibold self-center text-center w-10/12 rounded-xl  '>
-                    BUG DETAILS 
-                    <div>ANF / GCP</div> 
+                    CIT BUG DETAILS 
                 </div>
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <table class="w-full text-sm text-left rtl:text-right text-white">
