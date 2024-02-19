@@ -25,7 +25,7 @@ function Gcp_sanity() {
             <span className='p-2 block font-sans text-base antialiased font-medium leading-relaxed text-gray-500'>AU-SE1-SQA </span>
           </div>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>
-            <input type="radio" name="radio-1" value="CIT_ANF_Func_eastus_github" className="radio radio-info" onChange={onChange} />
+            <input type="radio" name="radio-1" value="GCP_Sanity_1P" className="radio radio-info" onChange={onChange} />
             <span className='p-2 block font-sans text-base antialiased font-medium leading-relaxed text-gray-500'>US-CENTRAL1</span>
           </div>
           <div className='flex flex-row p-0 items-center leading-tight w-full transition-all'>

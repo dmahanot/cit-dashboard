@@ -19,7 +19,6 @@ function Anf_sanity() {
   };
 
   const onTriggerClickHandler = () => {
-    console.log("hello");
     let config = {
       method: 'get',
       url: `http://localhost:3000/trigger-build/${radioValue}?p=build`,
@@ -29,6 +28,8 @@ function Anf_sanity() {
       .then((response) => {
         console.log(response.status);
         console.log(JSON.stringify(response.data));
+        const url = response.data.url;
+        alert(" Build Triggered on : "  + radioValue + " Successfully on \n " + url)
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +37,7 @@ function Anf_sanity() {
 
   }
 
-  const onAbortClickHandler = () => {
+  const onAbortClickHandler = () => {    
     console.log("radio value ", radioValue);
     console.log("Aborted the Existing run");
     let config = {
@@ -48,6 +49,8 @@ function Anf_sanity() {
       .then((response) => {
         console.log(response.status);
         console.log(JSON.stringify(response.data));
+        const url = response.data.url;
+        alert("Build Aborted on : " + radioValue + "Successfully on \n " + url)
       })
       .catch((error) => {
         console.log(error);
@@ -67,6 +70,8 @@ function Anf_sanity() {
       .then((response) => {
         console.log(response.status);
         console.log(JSON.stringify(response.data));
+        const url = response.data.url;
+        alert("Job Disabled on : " + radioValue +  " Successfully on \n " + url)
       })
       .catch((error) => {
         console.log(error);
@@ -118,7 +123,7 @@ function Anf_sanity() {
       <div className='grid grid-cols-4 place-items-center m-1 p-4'>
         <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
-            <MdInfoOutline />
+            {/* <MdInfoOutline /> */}
           </div>
           <div className='px-1'>
             View Previous
@@ -127,7 +132,7 @@ function Anf_sanity() {
         </button>
         <button onClick={() => onTrigger()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
-            <MdInfoOutline />
+            {/* <MdInfoOutline /> */}
           </div>
           <div className='px-1'>
             Trigger New
@@ -136,7 +141,7 @@ function Anf_sanity() {
         </button>
         <button onClick={() => onAbortClickHandler()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
-            <MdInfoOutline />
+            {/* <MdInfoOutline /> */}
           </div>
           <div className='px-1'>
             Abort Run
@@ -145,7 +150,7 @@ function Anf_sanity() {
         </button>
         <button onClick={ () => ondisableClickHandler()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
-            <MdInfoOutline />
+            {/* <MdInfoOutline /> */}
           </div>
           <div className='px-1'>
             Disable Job

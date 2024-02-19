@@ -16,12 +16,12 @@ app.get('/', (req, res) => {
 });
 
 
-
+//to trigger the run on region
 app.get('/trigger-build/:region/', async (req, res) => {
-    console.log('\n\n\n\n\n----------------------------hello------------------------------');
-
     const p = req.query.p;
     const region = req.params.region;
+
+    const URL = `https://cvscit-team-jenkins.daas.netapp.com/job/ANF_Sanity/job/ANF_Sanity_Github/job/job/${region}`
 
     console.log(`REQ PRAMS : ${p}`);
     console.log(`REQ PRAMS : ${region}`);
@@ -41,9 +41,12 @@ app.get('/trigger-build/:region/', async (req, res) => {
     };
     axios.request(config)
         .then((response) => {
-            if (response.status == 201) { res.send({ "result": "Build Triggered Successfully" }); }
+            if (response.status == 201) { res.send({ "result": "Build Triggered Successfully", "url": (URL) }); }
             else {
-                res.send({ "result": "Build Triggered Failed" });
+                res.send({
+                    "result": "Build Triggered Failed"
+                    , "url": (URL)
+                });
             }
             console.log(JSON.stringify(response.data));
         })
@@ -54,10 +57,13 @@ app.get('/trigger-build/:region/', async (req, res) => {
     // ************* ANF TRIGGER CODE END ********************//
 });
 
-// fetch the build number and abort the latest triggered run
+// fetch the build number and abort the latest triggered run in region
 app.get('/abort-build/:region/', async (req, res) => {
     const p = req.query.p;
     const region = req.params.region;
+
+    const URL = `https://cvscit-team-jenkins.daas.netapp.com/job/ANF_Sanity/job/ANF_Sanity_Github/job/job/${region}`
+
 
     console.log(`REQ PRAMS : ${p}`);
     console.log(`REQ PRAMS : ${region}`);
@@ -95,10 +101,14 @@ app.get('/abort-build/:region/', async (req, res) => {
                     res.send({
                         "fetched": `${response.data}`
                         , "result": "Build Aborted Successfully"
+                        , "url": (URL)
                     });
                 }
                 else {
-                    res.send({ "result": "Build Abort Failed" });
+                    res.send({
+                        "result": "Build Abort Failed"
+                        , "url": (URL)
+                    });
                 }
                 // console.log(JSON.stringify(responseNew.data));
             }).catch((error) => {
@@ -114,13 +124,14 @@ app.get('/abort-build/:region/', async (req, res) => {
 
 })
 
-
-
-// to disable the job
+// to disable the job in specified region 
 
 app.get('/disable-job/:region/', async (req, res) => {
     const p = req.query.p;
     const region = req.params.region;
+
+    const URL = `https://cvscit-team-jenkins.daas.netapp.com/job/ANF_Sanity/job/ANF_Sanity_Github/job/job/${region}`
+
 
     console.log(`REQ PRAMS : ${p}`);
     console.log(`REQ PRAMS : ${region}`);
@@ -138,9 +149,17 @@ app.get('/disable-job/:region/', async (req, res) => {
     };
     axios.request(config)
         .then((response) => {
-            if (response.status == 200) { res.send({ "result": " Job " + (p) + " successfully " , }); }
+            if (response.status == 200) {
+                res.send({
+                    "result": " Job " + (p) + " successfully "
+                    , "url": (URL)
+                });
+            }
             else {
-                res.send({ "result": " Job " + (p) + " Failed " });
+                res.send({
+                    "result": " Job " + (p) + " Failed "
+                    , "url": (URL)
+                });
             }
             console.log(JSON.stringify(response.data));
         })
