@@ -12,7 +12,7 @@ import Gcp_crr from './gcp/Gcp_crr';
 function Jenkins_new() {
   return (
     <>
-      <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-gray-300">
+      <div className="flex h-screen flex-col px-3 py-4 md:px-2 bg-gray-300">
         <Link
           className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40"
           to="/dashboard"

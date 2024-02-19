@@ -62,7 +62,7 @@ function Dashboard() {
 
     return (
         <>
-            <div className="flex h-full flex-col px-3 py-4 md:px-2">
+            <div className="flex h-screen flex-col px-3 py-4 md:px-2 ">
                 {/* <Navbar /> */}
                 <div className="bg-blue-500 py-4 px-2 justify-between flex ">
                     <div className="font-semibold text-2xl text-center items-center flex justify-evenly">
@@ -103,17 +103,127 @@ function Dashboard() {
                     </div>
                     <div className='bg-gray-200 h-48 flex items-center rounded-md'>
                         <img
-                            className=' h-fit w-44 pr-2 rounded-r-full bg-white'
-                            src='https://logosmarcas.net/wp-content/uploads/2020/11/Ubuntu-Logo-2004-2010.png'
+                            className=' h-fit w-44 rounded-r-full bg-white'
+                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7S_5ZVzJBTW6zZxsQiwxLNxsGoIkiwdjJq_SMZ4zqdO8jsyHO4VureuzLB02lfCttAo&usqp=CAU'
                             alt='' />
                         <div className='font-medium text-justify text-2xl lg:text-2xl md:pr-1 hover:font-bold hover:text-green-600 pl-2'>
-                            <Link to="/testcontroller">Test ControllerSetup</Link>
+                            <Link to="/testcontroller">VSIM SETUP</Link>
                         </div>
                     </div>
                 </div>
-                <div className='bg-gray-300 h-4/5 text-center py-2'>
-                    BUG Details
+                <div className='bg-gray-100 text-xl py-2 mb-4 font-semibold self-center text-center w-10/12 rounded-xl  '>
+                    CIT BUG DETAILS 
                 </div>
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table class="w-full text-sm text-left rtl:text-right text-white">
+                        <thead class="text-xs text-white uppercase bg-blue-500 dark:text-white">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    BUG ID
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Priority
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    created date
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    status
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Technical Owner
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <span class="sr-only">Edit</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    NFSAAS-77447
+                                </th>
+                                <td class="px-6 py-4">
+                                    P1
+                                </td>
+                                <td class="px-6 py-4">
+                                    11-Feb-24
+                                </td>
+                                <td class="px-6 py-4">
+                                    New
+                                </td>
+                                <td class="px-6 py-4">
+                                    Team Omega
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77447" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    NFSAAS-77233
+                                </th>
+                                <td class="px-6 py-4">
+                                    P1
+                                </td>
+                                <td class="px-6 py-4">
+                                    08-Feb-24
+                                </td>
+                                <td class="px-6 py-4">
+                                    Ready For Test
+                                </td>
+                                <td class="px-6 py-4">
+                                    Team Bicep
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77233" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    NFSAAS-77463
+                                </th>
+                                <td class="px-6 py-4">
+                                    P1
+                                </td>
+                                <td class="px-6 py-4">
+                                    12-Feb-24
+                                </td>
+                                <td class="px-6 py-4">
+                                    In Development
+                                </td>
+                                <td class="px-6 py-4">
+                                    Team Omega
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77463" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    NFSAAS-77495
+                                </th>
+                                <td class="px-6 py-4">
+                                    P1
+                                </td>
+                                <td class="px-6 py-4">
+                                    12-Feb-24
+                                </td>
+                                <td class="px-6 py-4">
+                                    New
+                                </td>
+                                <td class="px-6 py-4">
+                                    Team Bicep
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77495" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
             </div>
         </>
     )
