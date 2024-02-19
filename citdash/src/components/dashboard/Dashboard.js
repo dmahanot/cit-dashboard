@@ -157,7 +157,7 @@ function Dashboard() {
                                     Team Omega
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-69924" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77447" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
                                 </td>
                             </tr>
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -177,7 +177,7 @@ function Dashboard() {
                                     Team Bicep
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-71067" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77233" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
                                 </td>
                             </tr>
                             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -197,7 +197,7 @@ function Dashboard() {
                                     Team Omega
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77463" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77463" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
                                 </td>
                             </tr>
                             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -217,7 +217,7 @@ function Dashboard() {
                                     Team Bicep
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77495" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    <a href="https://jira.ngage.netapp.com/browse/NFSAAS-77495" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View/Edit</a>
                                 </td>
                             </tr>
                         </tbody>
