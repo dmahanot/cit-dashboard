@@ -54,6 +54,25 @@ function Anf_sanity() {
       })
   }
 
+  const ondisableClickHandler = () => {
+    console.log("radio value ", radioValue);
+    console.log("Disabled the JOB you selected");
+
+    let config = {
+      method: 'get',
+      url: `http://localhost:3000/disable-job/${radioValue}?p=disable`
+    }
+
+    axios.request(config)
+      .then((response) => {
+        console.log(response.status);
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
   return (
     <>
       <div className="relative flex w-full flex-col rounded-xl  bg-clip-border shadow-md bg-gray-50">
@@ -124,7 +143,7 @@ function Anf_sanity() {
           </div>
 
         </button>
-        <button className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
+        <button onClick={ () => ondisableClickHandler()} className='font-sans bg-gray-300 rounded-xl w-40 h-16 flex items-center justify-center  hover:text-white hover:bg-sky-600 '>
           <div className='px-1 '>
             <MdInfoOutline />
           </div>
