@@ -50,7 +50,7 @@ function Anf_sanity() {
         console.log(response.status);
         console.log(JSON.stringify(response.data));
         const url = response.data.url;
-        alert("Build Aborted on : " + radioValue + "Successfully on \n " + url)
+        alert("Build Aborted on : " + radioValue + " Successfully on \n " + url)
       })
       .catch((error) => {
         console.log(error);
