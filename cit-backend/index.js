@@ -169,6 +169,49 @@ app.get('/disable-job/:region/', async (req, res) => {
         });
 });
 
+
+//to fetch the console logs
+app.get('/console-logs/:region/', async (req, res) => {
+    const region = req.params.region;
+    const URL = `https://cvscit-team-jenkins.daas.netapp.com/job/ANF_Sanity/job/ANF_Sanity_Github/job/${region}`
+
+    console.log(`REQ PRAMS : ${region}`);
+
+    let configConsole = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `https://cvscit-team-jenkins.daas.netapp.com/job/ANF_Sanity/job/ANF_Sanity_Github/job/${region}/lastBuild/consoleText?token=cit-dash`,
+        headers: {
+            'Access-Control-Allow-Origin': 'true',
+            'Access-Control-Allow-Credentials': 'true',
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic Y2l0dXNlcjoxMTY5MDY0MTQ2MWFiNzNkMzU2OWJhNTJhNjg1M2QyZmUz'
+        },
+        httpsAgent
+    };
+
+    axios.request(configConsole)
+    .then((responseConsole) => {
+
+        if (responseConsole.status == 200) {
+            res.send({
+                "fetched": `${responseConsole.data}`
+                , "result": "Console logged successfully"
+                , "url": (URL)
+            });
+        }
+        else {
+            res.send({
+                "result": "Console logged Failed"
+                , "url": (URL)
+            });
+        }
+    }).catch((error) => {
+        res.send({ "error": error.message });
+        console.log(error);
+    });
+})
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
